@@ -8,7 +8,6 @@ namespace CeasarVerschlusselung
         public static String encrypt(int key, String eingabe)
         {
             char[] alphabet = Alphabet.alphabet;
-
             StringBuilder neuerSatz = new StringBuilder();
 
             foreach (char c in eingabe )
@@ -17,7 +16,6 @@ namespace CeasarVerschlusselung
                 {
                     if (c.Equals(alphabet[j]))
                     {
-
                         if (j + key > alphabet.Length-1)
                         {
                             neuerSatz.Append(alphabet[j + key - alphabet.Length]);
@@ -26,8 +24,6 @@ namespace CeasarVerschlusselung
                         {
                             neuerSatz.Append(alphabet[j + key]);
                         }
-
-
                         break;
                     }
                 }
