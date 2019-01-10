@@ -1,30 +1,28 @@
-using System;
 using System.Text;
 
 namespace CeasarVerschlusselung
 {
     public class Encrypt
     {
-        public static String encrypt(int key, String eingabe)
+        public static string Start(int key, string eingabe)
         {
             char[] alphabet = Alphabet.alphabet;
             StringBuilder neuerSatz = new StringBuilder();
 
-            foreach (char c in eingabe )
+            foreach (char c in eingabe)
             {
-                for (int j = 0; j <= alphabet.Length - 1; j++)
+                for (int i = 0; i <= alphabet.Length - 1; i++)
                 {
-                    if (c.Equals(alphabet[j]))
+                    if (c.Equals(alphabet[i]))
                     {
-                        if (j + key > alphabet.Length-1)
+                        if (i + key > alphabet.Length-1)
                         {
-                            neuerSatz.Append(alphabet[j + key - alphabet.Length]);
+                            neuerSatz.Append(alphabet[i + key - alphabet.Length]);
                         }
                         else
                         {
-                            neuerSatz.Append(alphabet[j + key]);
+                            neuerSatz.Append(alphabet[i + key]);
                         }
-                        break;
                     }
                 }
             }

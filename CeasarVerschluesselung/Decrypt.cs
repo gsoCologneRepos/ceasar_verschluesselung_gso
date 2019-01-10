@@ -1,4 +1,3 @@
-using System;
 using System.Text;
 
 namespace CeasarVerschlusselung
@@ -7,7 +6,7 @@ namespace CeasarVerschlusselung
     {
         
         
-        public static String decrypt(int key, String eingabe)
+        public static string Start(int key, string eingabe)
         {
             char[] alphabet = Alphabet.alphabet;
 
@@ -15,25 +14,24 @@ namespace CeasarVerschlusselung
 
             foreach (char c in eingabe )
             {
-                for (int j = 0; j <= alphabet.Length - 1; j++)
+                for (int i = 0; i <= alphabet.Length - 1; i++)
                 {
                     if (c.Equals(alphabet[j]))
                     {
 
-                        if (j + key > alphabet.Length-1)
+                        if (i + key > alphabet.Length-1)
                         {
-                            neuerSatz.Append(alphabet[j + key + alphabet.Length-1]);
+                            neuerSatz.Append(alphabet[i + key + alphabet.Length-1]);
                         }
+
                         else
                         {
-                            neuerSatz.Append(alphabet[j - key]);
+                            neuerSatz.Append(alphabet[i - key]);
                         }
-
-
-                        break;
                     }
                 }
             }
+
             return neuerSatz.ToString();
         }
     }
