@@ -5,7 +5,7 @@ namespace CeasarVerschlusselung
 {
     public class Encrypt
     {
-        public static String encrypt(int key, String eingabe)
+        public static String Start(int key, String eingabe)
         {
             char[] alphabet = Alphabet.alphabet;
             StringBuilder neuerSatz = new StringBuilder();

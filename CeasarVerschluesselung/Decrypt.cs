@@ -16,7 +16,7 @@ namespace CeasarVerschlusselung
             {
                 for (int i = 0; i <= alphabet.Length - 1; i++)
                 {
-                    if (c.Equals(alphabet[j]))
+                    if (c.Equals(alphabet[i]))
                     {
 
                         if (i + key > alphabet.Length-1)
