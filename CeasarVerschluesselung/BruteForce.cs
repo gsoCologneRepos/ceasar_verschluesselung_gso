@@ -5,25 +5,13 @@ namespace CeasarVerschlusselung
 {
     public class BruteForce
     {
-        public static void bruteForce(char[] satz)
+        public static void bruteForce(String text)
         {
             char[] alphabet = Alphabet.alphabet;
-            
-            for (int zahl = 0; zahl <= alphabet.Length; zahl++)
+            int length = alphabet.Length - 1;
+            for (int key = 0; key <= length; key++)
             {
-                StringBuilder neuerSatz = new StringBuilder();
-                for (int i = 0; i <= satz.Length-1; i++)
-                {
-                    for (int j = 0; j <= alphabet.Length-1; j++)
-                    {
-                        if (satz[i].Equals(alphabet[j]))
-                        {
-                            neuerSatz.Append(alphabet[j + zahl]);
-
-                        }
-                    }
-                    Console.WriteLine(zahl+"."+ " " +neuerSatz.ToString());
-                }
+                Console.WriteLine(Encrypt.encrypt(key,text));
             }
         }
     }

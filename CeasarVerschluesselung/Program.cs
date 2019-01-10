@@ -33,7 +33,7 @@ namespace CeasarVerschlusselung
             }
 
             if (mode == 3) {
-                //BruteForce.bruteForce(eingabe);
+                BruteForce.bruteForce(eingabe);
             }
 
             Console.ReadKey();
