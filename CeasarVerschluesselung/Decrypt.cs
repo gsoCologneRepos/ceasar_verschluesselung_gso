@@ -20,9 +20,9 @@ namespace CeasarVerschlusselung
                     if (c.Equals(alphabet[j]))
                     {
 
-                        if (j + key > alphabet.Length)
+                        if (j + key > alphabet.Length-1)
                         {
-                            neuerSatz.Append(alphabet[j + key + alphabet.Length]);
+                            neuerSatz.Append(alphabet[j + key + alphabet.Length-1]);
                         }
                         else
                         {
