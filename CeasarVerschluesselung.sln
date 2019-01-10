@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CeasarVerschluesselung", "CeasarVerschluesselung\CeasarVerschluesselung.csproj", "{FE3F4841-10A9-48F0-B9E2-9A2DB2C49154}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FE3F4841-10A9-48F0-B9E2-9A2DB2C49154}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FE3F4841-10A9-48F0-B9E2-9A2DB2C49154}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FE3F4841-10A9-48F0-B9E2-9A2DB2C49154}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FE3F4841-10A9-48F0-B9E2-9A2DB2C49154}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
