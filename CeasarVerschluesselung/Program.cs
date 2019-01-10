@@ -29,7 +29,7 @@ namespace CeasarVerschlusselung
             {
                 Console.WriteLine("Gib um wie viele stellen soll verschoben werden?");
                 int key = Int32.Parse(Console.ReadLine());
-               // Console.WriteLine(Decrypt.decrypt(key, eingabe));
+                Console.WriteLine(Decrypt.decrypt(key, eingabe));
             }
 
             if (mode == 3) {

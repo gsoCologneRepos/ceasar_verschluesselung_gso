@@ -32,7 +32,6 @@ namespace CeasarVerschlusselung
                     }
                 }
             }
-
             return neuerSatz.ToString();
         }
     }
