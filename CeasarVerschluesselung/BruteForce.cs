@@ -6,12 +6,10 @@ namespace CeasarVerschlusselung
     {
         public static void Start(string text)
         {
-            char[] alphabet = Alphabet.alphabet;
-            int length = alphabet.Length - 1;
-
-            for (int key = 0; key <= length; key++)
+            int asciiLength = 255;
+            for (int key = 0; key <= asciiLength; key++)
             {
-                Console.WriteLine(Encrypt.Start(key,text));
+                Console.WriteLine(key+": "+Decrypt.Start(key,text));
             }
         }
     }
