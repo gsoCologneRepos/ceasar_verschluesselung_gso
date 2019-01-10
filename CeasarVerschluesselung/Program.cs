@@ -15,8 +15,6 @@ namespace CeasarVerschlusselung
             //IO Beginnt
             Console.WriteLine("Geb deinen Satz ein: ");
             String eingabe = Console.ReadLine();
-            eingabe = eingabe.ToLower();
-            char[] satz = eingabe.ToCharArray();
             
 
             //IO Beendet
@@ -25,17 +23,17 @@ namespace CeasarVerschlusselung
             {
                 Console.WriteLine("Gib um wie viele stellen soll verschoben werden?");
                 int key = Int32.Parse(Console.ReadLine());
-                Console.WriteLine(Encrypt.encrypt(key, satz));
+                Console.WriteLine(Encrypt.encrypt(key, eingabe));
             }
             if (mode == 2)
             {
                 Console.WriteLine("Gib um wie viele stellen soll verschoben werden?");
                 int key = Int32.Parse(Console.ReadLine());
-                Console.WriteLine(Decrypt.decrypt(key, satz));
+               // Console.WriteLine(Decrypt.decrypt(key, eingabe));
             }
 
             if (mode == 3) {
-                BruteForce.bruteForce(satz);
+                //BruteForce.bruteForce(eingabe);
             }
 
             Console.ReadKey();
