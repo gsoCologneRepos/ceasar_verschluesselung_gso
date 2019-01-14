@@ -1,4 +1,5 @@
 using System;
+using System.Text;
 
 namespace CeasarVerschlusselung
 {
@@ -8,15 +9,14 @@ namespace CeasarVerschlusselung
         {
             StringBuilder sb = new StringBuilder();
             System.IO.StreamReader file = new System.IO.StreamReader(path);
-            System.IO.StreamWriter writer = new System.IO.StreamWriter(path+_encryped); 
-            thisLine = file.ReadLine();
+            System.IO.StreamWriter writer = new System.IO.StreamWriter(path+"_encryped"); 
             String line = "";
             String crypted ="";
             
             
-            for(int i = 0; thisLine != null; i++){
-                line = ReadLine();
-                crypted = Encryp(line);
+            for(int i = 0; line != null; i++){
+                line = file.ReadLine();
+                crypted = Encrypt.Start(line);
                 sb.Append(crypted);
                 writer.WriteLine(crypted);
             }
