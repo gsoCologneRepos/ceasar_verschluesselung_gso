@@ -3,22 +3,22 @@ using System.Text;
 
 namespace CeasarVerschlusselung
 {
-    public class TextDateiEncrypt
+    public class TextDecrypt
     {
-        public static void Read(string path)
+        public static void Decrypt(string path)
         {
             StringBuilder sb = new StringBuilder();
             System.IO.StreamReader file = new System.IO.StreamReader(path);
-            System.IO.StreamWriter writer = new System.IO.StreamWriter(path+"_encryped"); 
+            System.IO.StreamWriter writer = new System.IO.StreamWriter(path+"_decryped"); 
             String line = "";
-            String crypted ="";
+            String decrypted ="";
             
             
             for(int i = 0; line != null; i++){
                 line = file.ReadLine();
-                crypted = Encrypt.Start(line);
-                sb.Append(crypted);
-                writer.WriteLine(crypted);
+                decrypted = Decrypt.Start(line);
+                sb.Append(decrypted);
+                writer.WriteLine(decrypted);
             }
                 
         }

@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 
 namespace CeasarVerschlusselung
 {
@@ -10,6 +10,8 @@ namespace CeasarVerschlusselung
             Console.WriteLine("(1) Verschlüsseln");
             Console.WriteLine("(2) Entschlüsseln");
             Console.WriteLine("(3) Versuchen einen Satz zu entschluesseln");
+            Console.WriteLine("(4) Textdatei einlesen und entschluesseln lassen");
+            Console.WriteLine("(5) Textdatei einlesen und verschluesseln lassen");
             int mode = int.Parse(Console.ReadLine());
 
             //IO Beginnt
@@ -35,8 +37,21 @@ namespace CeasarVerschlusselung
             if (mode == 3) {
                 BruteForce.Start(eingabe);
             }
-
-            Console.ReadKey();
+            
+            if(mode == 4){
+                Console.WriteLine("Bitte den Pfad zu ihrer (verschluesselten) Textdatei angeben");
+                String pfad = Console.ReadLine();
+                TextEncrypt.Encrypt(pfad);
+            }
+            
+            if(mode == 5){
+                Console.WriteLine("Bitte den Pfad zu ihrer (entschluesselten) Textdatei angeben");
+                String pfad = Console.ReadLine();
+                TextDecrypt.Decrypt(pfad);
+            }
+            else{
+                Console.ReadKey();    
+            }
         }
     }
 }
