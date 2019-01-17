@@ -5,7 +5,7 @@ namespace CeasarVerschlusselung
 {
     internal class TextEncrypt
     {
-        public static void Encrypt(string path)
+        public static void TextEncrypt(string path)
         {
             StringBuilder sb = new StringBuilder();
             System.IO.StreamReader file = new System.IO.StreamReader(path);

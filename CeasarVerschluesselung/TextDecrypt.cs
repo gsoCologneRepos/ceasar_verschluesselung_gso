@@ -5,7 +5,7 @@ namespace CeasarVerschlusselung
 {
     public class TextDecrypt
     {
-        public static void Decrypt(string path)
+        public static void TextDecrypt(string path)
         {
             StringBuilder sb = new StringBuilder();
             System.IO.StreamReader file = new System.IO.StreamReader(path);
