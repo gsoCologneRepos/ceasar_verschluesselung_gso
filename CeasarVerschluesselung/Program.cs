@@ -9,7 +9,7 @@ namespace CeasarVerschlusselung
             Console.WriteLine("Wähle eine Funktion:"); 
             Console.WriteLine("(1) Verschlüsseln");
             Console.WriteLine("(2) Entschlüsseln");
-            Console.WriteLine("(3) Versuchen einen Satz zu entschluesseln");
+            Console.WriteLine("(3) Versuchen einen Satz zu entschluesseln ohne den Schlüssel zu kennen");
             Console.WriteLine("(4) Textdatei einlesen und entschluesseln lassen");
             Console.WriteLine("(5) Textdatei einlesen und verschluesseln lassen");
             int mode = int.Parse(Console.ReadLine());
@@ -17,7 +17,6 @@ namespace CeasarVerschlusselung
             //IO Beginnt
             Console.WriteLine("Geb deinen Satz ein: ");
             string eingabe = Console.ReadLine();
-            
 
             //IO Beendet
 
@@ -39,15 +38,19 @@ namespace CeasarVerschlusselung
             }
             
             if(mode == 4){
+                Console.WriteLine("Gib um wie viele stellen soll verschoben werden?");
+                int key = int.Parse(Console.ReadLine());
                 Console.WriteLine("Bitte den Pfad zu ihrer (verschluesselten) Textdatei angeben");
                 String pfad = Console.ReadLine();
-                TextEncrypt.Encrypt(pfad);
+                TextEncrypt.Start(key,pfad);
             }
             
             if(mode == 5){
+                Console.WriteLine("Gib um wie viele stellen soll verschoben werden?");
+                int key = int.Parse(Console.ReadLine());
                 Console.WriteLine("Bitte den Pfad zu ihrer (entschluesselten) Textdatei angeben");
                 String pfad = Console.ReadLine();
-                TextDecrypt.Decrypt(pfad);
+                TextDecrypt.Start(key,pfad);
             }
             else{
                 Console.ReadKey();    
