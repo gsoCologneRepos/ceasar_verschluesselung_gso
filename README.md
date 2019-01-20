@@ -1,6 +1,6 @@
 # ceasar_verschluesselung_gso
 cesar_verschluesselung für GSO
-##Deutsch/German:
+## Deutsch/German:
 Dieses Programm entstand im Rahmen einer Schulaufgabe des Georg-Simon-Ohm Berufskollegs in Köln.
 Es ist eine C#-Lösung der Ceasar-Verschlüsselung. 
 ### Features:
