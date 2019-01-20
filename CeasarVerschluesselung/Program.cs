@@ -15,25 +15,32 @@ namespace CeasarVerschlusselung
             int mode = int.Parse(Console.ReadLine());
 
             //IO Beginnt
-            Console.WriteLine("Geb deinen Satz ein: ");
-            string eingabe = Console.ReadLine();
-
+            
             //IO Beendet
 
             if(mode == 1)
             {
                 Console.WriteLine("Gib um wie viele stellen soll verschoben werden?");
                 int key = int.Parse(Console.ReadLine());
+                Console.WriteLine("Geb deinen Satz ein: ");
+                string eingabe = Console.ReadLine();
+
                 Console.WriteLine(Encrypt.Start(key, eingabe));
             }
             if (mode == 2)
             {
                 Console.WriteLine("Gib um wie viele stellen soll verschoben werden?");
                 int key = int.Parse(Console.ReadLine());
+                Console.WriteLine("Geb deinen Satz ein: ");
+                string eingabe = Console.ReadLine();
+
                 Console.WriteLine(Decrypt.Start(key, eingabe));
             }
 
             if (mode == 3) {
+                Console.WriteLine("Geb deinen Satz ein: ");
+                string eingabe = Console.ReadLine();
+
                 BruteForce.Start(eingabe);
             }
             
@@ -42,7 +49,7 @@ namespace CeasarVerschlusselung
                 int key = int.Parse(Console.ReadLine());
                 Console.WriteLine("Bitte den Pfad zu ihrer (verschluesselten) Textdatei angeben");
                 String pfad = Console.ReadLine();
-                TextEncrypt.Start(key,pfad);
+                TextDecrypt.Start(key,pfad);
             }
             
             if(mode == 5){
@@ -50,7 +57,7 @@ namespace CeasarVerschlusselung
                 int key = int.Parse(Console.ReadLine());
                 Console.WriteLine("Bitte den Pfad zu ihrer (entschluesselten) Textdatei angeben");
                 String pfad = Console.ReadLine();
-                TextDecrypt.Start(key,pfad);
+                TextEncrypt.Start(key,pfad);
             }
             else{
                 Console.ReadKey();    

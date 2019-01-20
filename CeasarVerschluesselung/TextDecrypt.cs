@@ -7,20 +7,18 @@ namespace CeasarVerschlusselung
     {
         public static void Start(int key,string path)
         {
-            StringBuilder sb = new StringBuilder();
-            System.IO.StreamReader file = new System.IO.StreamReader(path);
-            System.IO.StreamWriter writer = new System.IO.StreamWriter(path+"_decryped"); 
-            String line = "";
-            String decrypted ="";
-            
-            
-            for(int i = 0; line != null; i++){
-                line = file.ReadLine();
-                decrypted = Decrypt.Start(key,line);
-                sb.Append(decrypted);
-                writer.WriteLine(decrypted);
+            try
+            {              
+                System.IO.StreamReader file = new System.IO.StreamReader(path);
+                String text = file.ReadToEnd();
+                System.IO.File.WriteAllText(path+"_decryped.txt",Decrypt.Start(key,text));
+                Console.WriteLine("Fertig!");
             }
-                
+            catch (Exception e)
+            {
+                Console.WriteLine(e);
+                Console.WriteLine("ERROR!");
+            }
         }
     }
 }
