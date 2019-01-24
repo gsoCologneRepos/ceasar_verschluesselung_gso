@@ -18,6 +18,7 @@ namespace CeasarVerschlusselung
             for (int i = 0; i <= asciiBytes.Length-1; i++)
             {
                     int pivot = asciiBytes[i];
+                    key = CheckLower(pivot - key);
                     char zeichen = (char) (pivot - key);
                     neuerSatz.Append(zeichen);                 
             }
@@ -25,16 +26,16 @@ namespace CeasarVerschlusselung
             return neuerSatz.ToString();
         }
 
-        public static int CheckLower(int key)
+        public static int CheckLower(int asciiChar)
         {
-            if (key > 127)
+            if (asciiChar > 127)
             {
-                key -= 127;
-                return CheckLower(key);
+                asciiChar -= 127;
+                return CheckLower(asciiChar);
             }
             else
             {
-                return key;
+                return asciiChar;
             }
                 
         }
