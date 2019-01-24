@@ -17,7 +17,7 @@ namespace CeasarVerschlusselung
             {
                     int pivot = asciiBytes[i];
                     key = CheckLower(pivot - key);
-                    char zeichen = (char) (pivot - key);
+                    char zeichen = (char) (key);
                     neuerSatz.Append(zeichen);                 
             }
 
