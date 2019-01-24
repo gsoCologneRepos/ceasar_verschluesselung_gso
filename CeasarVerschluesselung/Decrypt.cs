@@ -1,3 +1,4 @@
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 
 namespace CeasarVerschlusselung
@@ -11,7 +12,9 @@ namespace CeasarVerschlusselung
 
             StringBuilder neuerSatz = new StringBuilder();
             byte[] asciiBytes = Encoding.ASCII.GetBytes(eingabe);
-            
+
+            key = CheckLower(key);
+
             for (int i = 0; i <= asciiBytes.Length-1; i++)
             {
                     int pivot = asciiBytes[i];
@@ -20,6 +23,20 @@ namespace CeasarVerschlusselung
             }
 
             return neuerSatz.ToString();
+        }
+
+        public static int CheckLower(int key)
+        {
+            if (key > 127)
+            {
+                key -= 127;
+                return CheckLower(key);
+            }
+            else
+            {
+                return key;
+            }
+                
         }
     }
 }

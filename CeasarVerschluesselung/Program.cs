@@ -6,6 +6,7 @@ namespace CeasarVerschlusselung
     {
         public static void Main(string[] args)
         {
+            
             Console.WriteLine("Wähle eine Funktion:"); 
             Console.WriteLine("(1) Verschlüsseln");
             Console.WriteLine("(2) Entschlüsseln");
