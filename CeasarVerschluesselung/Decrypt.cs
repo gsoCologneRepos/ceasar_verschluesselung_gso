@@ -13,8 +13,6 @@ namespace CeasarVerschlusselung
             StringBuilder neuerSatz = new StringBuilder();
             byte[] asciiBytes = Encoding.ASCII.GetBytes(eingabe);
 
-            key = CheckLower(key);
-
             for (int i = 0; i <= asciiBytes.Length-1; i++)
             {
                     int pivot = asciiBytes[i];
