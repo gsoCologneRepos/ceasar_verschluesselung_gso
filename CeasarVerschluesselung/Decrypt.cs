@@ -26,9 +26,9 @@ namespace CeasarVerschlusselung
 
         public static int CheckLower(int asciiChar)
         {
-            if (asciiChar > 127)
+            if (asciiChar < 0)
             {
-                asciiChar -= 127;
+                asciiChar += 127;
                 return CheckLower(asciiChar);
             }
             else
